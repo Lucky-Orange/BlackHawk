@@ -9,9 +9,9 @@ To be filled.
 
 ##Cordova Compatible
 
-- [*] Console
-- [*] Accelerometer
-- [] Bluetooth
+- [x] Console
+- [x] Accelerometer
+- [ ] Bluetooth
 
 ##LICENSE
 BlackHawk is open-sourced software licensed under the MIT license.
