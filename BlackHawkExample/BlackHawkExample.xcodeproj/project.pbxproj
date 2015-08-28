@@ -15,11 +15,11 @@
 		8EB9D4CC1B903DAE00C46FA6 /* BlackHawkExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9D4CB1B903DAE00C46FA6 /* BlackHawkExampleTests.swift */; };
 		8EB9D5351B9044A800C46FA6 /* BlackHawk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB9D5321B9044A200C46FA6 /* BlackHawk.framework */; };
 		8EB9D5361B9044A800C46FA6 /* BlackHawk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB9D5321B9044A200C46FA6 /* BlackHawk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8EB9D5411B9047EA00C46FA6 /* GCDWebServers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB9D53F1B9047D100C46FA6 /* GCDWebServers.framework */; };
-		8EB9D5421B9047EA00C46FA6 /* GCDWebServers.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB9D53F1B9047D100C46FA6 /* GCDWebServers.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8EB9D5441B904F9A00C46FA6 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 8EB9D5431B904F9A00C46FA6 /* www */; settings = {ASSET_TAGS = (); }; };
 		8EB9D5481B904FED00C46FA6 /* Accelerometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9D5461B904FED00C46FA6 /* Accelerometer.swift */; settings = {ASSET_TAGS = (); }; };
 		8EB9D5491B904FED00C46FA6 /* Console.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9D5471B904FED00C46FA6 /* Console.swift */; settings = {ASSET_TAGS = (); }; };
+		C8CFD2E61B90B699006FDE56 /* GCDWebServers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8CFD2E11B90B677006FDE56 /* GCDWebServers.framework */; };
+		C8CFD2E71B90B699006FDE56 /* GCDWebServers.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C8CFD2E11B90B677006FDE56 /* GCDWebServers.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +51,41 @@
 			remoteGlobalIDString = 8EB9D50B1B903F4B00C46FA6;
 			remoteInfo = BlackHawk;
 		};
+		C8CFD2DA1B90B677006FDE56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8CFD2D21B90B677006FDE56 /* GCDWebServer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DD76FB20486AB0100D96B5E;
+			remoteInfo = "GCDWebServer (Mac)";
+		};
+		C8CFD2DC1B90B677006FDE56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8CFD2D21B90B677006FDE56 /* GCDWebServer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E221125A1690B4DE0048D2B2;
+			remoteInfo = "GCDWebServer (iOS)";
+		};
+		C8CFD2DE1B90B677006FDE56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8CFD2D21B90B677006FDE56 /* GCDWebServer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CEE28CD11AE004D800F4023C;
+			remoteInfo = "GCDWebServers (Mac)";
+		};
+		C8CFD2E01B90B677006FDE56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8CFD2D21B90B677006FDE56 /* GCDWebServer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CEE28CEF1AE0051F00F4023C;
+			remoteInfo = "GCDWebServers (iOS)";
+		};
+		C8CFD2E81B90B69A006FDE56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8CFD2D21B90B677006FDE56 /* GCDWebServer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = CEE28CEE1AE0051F00F4023C;
+			remoteInfo = "GCDWebServers (iOS)";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,7 +96,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				8EB9D5361B9044A800C46FA6 /* BlackHawk.framework in Embed Frameworks */,
-				8EB9D5421B9047EA00C46FA6 /* GCDWebServers.framework in Embed Frameworks */,
+				C8CFD2E71B90B699006FDE56 /* GCDWebServers.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,10 +115,10 @@
 		8EB9D4CB1B903DAE00C46FA6 /* BlackHawkExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackHawkExampleTests.swift; sourceTree = "<group>"; };
 		8EB9D4CD1B903DAE00C46FA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EB9D52C1B9044A200C46FA6 /* BlackHawk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BlackHawk.xcodeproj; path = ../BlackHawk/BlackHawk.xcodeproj; sourceTree = "<group>"; };
-		8EB9D53F1B9047D100C46FA6 /* GCDWebServers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GCDWebServers.framework; sourceTree = "<group>"; };
 		8EB9D5431B904F9A00C46FA6 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../www; sourceTree = "<group>"; };
 		8EB9D5461B904FED00C46FA6 /* Accelerometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Accelerometer.swift; path = ../../BlackHawkPlugins/Accelerometer.swift; sourceTree = "<group>"; };
 		8EB9D5471B904FED00C46FA6 /* Console.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Console.swift; path = ../../BlackHawkPlugins/Console.swift; sourceTree = "<group>"; };
+		C8CFD2D21B90B677006FDE56 /* GCDWebServer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GCDWebServer.xcodeproj; path = "GCDWebServer-3.2.5/GCDWebServer.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EB9D5351B9044A800C46FA6 /* BlackHawk.framework in Frameworks */,
-				8EB9D5411B9047EA00C46FA6 /* GCDWebServers.framework in Frameworks */,
+				C8CFD2E61B90B699006FDE56 /* GCDWebServers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +197,7 @@
 		8EB9D53A1B9046B000C46FA6 /* Dependences */ = {
 			isa = PBXGroup;
 			children = (
-				8EB9D53F1B9047D100C46FA6 /* GCDWebServers.framework */,
+				C8CFD2D21B90B677006FDE56 /* GCDWebServer.xcodeproj */,
 			);
 			name = Dependences;
 			sourceTree = "<group>";
@@ -174,6 +209,17 @@
 				8EB9D5471B904FED00C46FA6 /* Console.swift */,
 			);
 			name = BlackHawkPlugins;
+			sourceTree = "<group>";
+		};
+		C8CFD2D31B90B677006FDE56 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C8CFD2DB1B90B677006FDE56 /* GCDWebServer */,
+				C8CFD2DD1B90B677006FDE56 /* GCDWebServer.app */,
+				C8CFD2DF1B90B677006FDE56 /* GCDWebServers.framework */,
+				C8CFD2E11B90B677006FDE56 /* GCDWebServers.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +238,7 @@
 			);
 			dependencies = (
 				8EB9D5381B9044A900C46FA6 /* PBXTargetDependency */,
+				C8CFD2E91B90B69A006FDE56 /* PBXTargetDependency */,
 			);
 			name = BlackHawkExample;
 			productName = BlackHawkExample;
@@ -227,6 +274,7 @@
 				TargetAttributes = {
 					8EB9D4B21B903DAE00C46FA6 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = FPBUD52ZYH;
 					};
 					8EB9D4C61B903DAE00C46FA6 = {
 						CreatedOnToolsVersion = 7.0;
@@ -250,6 +298,10 @@
 					ProductGroup = 8EB9D52D1B9044A200C46FA6 /* Products */;
 					ProjectRef = 8EB9D52C1B9044A200C46FA6 /* BlackHawk.xcodeproj */;
 				},
+				{
+					ProductGroup = C8CFD2D31B90B677006FDE56 /* Products */;
+					ProjectRef = C8CFD2D21B90B677006FDE56 /* GCDWebServer.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -272,6 +324,34 @@
 			fileType = wrapper.cfbundle;
 			path = BlackHawkTests.xctest;
 			remoteRef = 8EB9D5331B9044A200C46FA6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C8CFD2DB1B90B677006FDE56 /* GCDWebServer */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = GCDWebServer;
+			remoteRef = C8CFD2DA1B90B677006FDE56 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C8CFD2DD1B90B677006FDE56 /* GCDWebServer.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = GCDWebServer.app;
+			remoteRef = C8CFD2DC1B90B677006FDE56 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C8CFD2DF1B90B677006FDE56 /* GCDWebServers.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GCDWebServers.framework;
+			remoteRef = C8CFD2DE1B90B677006FDE56 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C8CFD2E11B90B677006FDE56 /* GCDWebServers.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GCDWebServers.framework;
+			remoteRef = C8CFD2E01B90B677006FDE56 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -329,6 +409,11 @@
 			isa = PBXTargetDependency;
 			name = BlackHawk;
 			targetProxy = 8EB9D5371B9044A900C46FA6 /* PBXContainerItemProxy */;
+		};
+		C8CFD2E91B90B69A006FDE56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GCDWebServers (iOS)";
+			targetProxy = C8CFD2E81B90B69A006FDE56 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -437,6 +522,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -454,6 +540,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -510,6 +597,7 @@
 				8EB9D4D21B903DAE00C46FA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8EB9D4D31B903DAE00C46FA6 /* Build configuration list for PBXNativeTarget "BlackHawkExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +606,7 @@
 				8EB9D4D51B903DAE00C46FA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
