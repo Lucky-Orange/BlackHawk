@@ -65,7 +65,7 @@ Thanks to the completely Object Oriented Swift and its namespace, we can reflect
 
 > 1. Full class name is CFBundleName + ClassName in Swift
 > 2. The native plugin class must inherit from BlackHawkPlugin class
-> 3. You can call any function in any plugin class freely
+> 3. You can call any functions in any plugin classes freely
 
 ####Fire the Function
 
