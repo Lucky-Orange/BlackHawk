@@ -21,8 +21,8 @@ The ultimate goal of BlackHawk is being a complete replacement of Cordova on iOS
 
 ####Check-list of BlackHawk plugins:
 
-- [x] Console
-- [x] Accelerometer
+- [x] [Console](https://github.com/Lucky-Orange/BlackHawk-Plugin-Console)
+- [x] [Accelerometer](https://github.com/Lucky-Orange/BlackHawk-Plugin-Accelerometer)
 - [ ] Bluetooth (waitting for supporting iOS8)
 - [ ] Vibration
 - [ ] Device
