@@ -26,7 +26,7 @@ WITHOUT ANY PRIVATE APIs.
 
 ###How Dose Javascript Send Messages to Native Layer
 
-We use wkScriptMessageHandler() in WKScriptMessageHandler delegate to receive messages sent by javascript. Sendding messages in javascript is pretty easy in WKWebView:
+We use `userContentController(userContentController: WKUserContentController, didReceiveScriptMessage message: WKScriptMessage)` in WKScriptMessageHandler delegate to receive messages sent by javascript. Sendding messages in javascript is pretty easy in WKWebView:
 
 ```js
 // js code
