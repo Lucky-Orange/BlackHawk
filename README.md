@@ -51,7 +51,7 @@ We use `window.webkit.messageHandlers.BlackHawk.postMessage` send a JavaScript O
 window.webkit.messageHandlers.BlackHawk.postMessage({className: 'Console', functionName: 'log', taskId: Queue.length - 1, data: string});
 ```
 
-Then we can get a NSDictionary on native layer, so we get the class name and the function name.
+We get a NSDictionary on native layer, then we can get the class name and the function name.
 
 ####Get the Object
 
