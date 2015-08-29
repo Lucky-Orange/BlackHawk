@@ -61,7 +61,7 @@ if let cls = NSClassFromString(NSBundle.mainBundle().objectForInfoDictionaryKey(
 }
 ```
 
-Thanks to the completely Object Oriented Swift, we can reflect a object much more safe and flexible:
+Thanks to the completely Object Oriented Swift and its namespace, we can reflect a object much more safe and flexible:
 
 > 1. Full class name is CFBundleName + ClassName in Swift
 > 2. The native plugin class must inherit from BlackHawkPlugin class
