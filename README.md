@@ -87,7 +87,7 @@ The ultimate goal of BlackHawk is being a complete replacement of Cordova on iOS
 
 - [x] Console
 - [x] Accelerometer
-- [ ] Bluetooth (waitting for it's support of iOS8)
+- [ ] Bluetooth (waitting for supporting iOS8)
 - [ ] Vibration
 - [ ] Device
 - [ ] Device Orientation
