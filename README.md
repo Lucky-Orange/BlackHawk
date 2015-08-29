@@ -33,7 +33,7 @@ We use `userContentController(userContentController: WKUserContentController, di
 window.webkit.messageHandlers.BlackHawk.postMessage('Hello BlackHawk!');
 ```
 
-After we regist it:
+We had registed it before:
 
 ```swift
 // swift code
