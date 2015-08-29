@@ -5,18 +5,33 @@ BlackHawk is a Cordova like javascript-native reflection bridge based on fast an
 
 ##Features
 
-###Basic Feature
+####Basic Feature
 
 BlackHawk is a Cordova like software that provides a javascript to native reflection bridge, written in pure Swift, aimed to provide a modern, hight-performance replacement of Cordova  on iOS platform. BlackHawk uses WKWebView in Apple's new WebKit Framework with pure Swift Language.
 
-###High Performance
+####High Performance
 BlackHawk can reduce the cost of RAM and CPU significantly, especially for complicated HTML5 pages. A chinese shooting game called "萌战姬" was tested on iPod Touch 6 with BlackHawk and Cordova that BlackHawk can reduce the RAM/CPU cost from 140MB / 100% on UIWebView to 9MB / 5%, and increase the fps from 40 to 60. That's tons of progress.
 
 (BTW, the full CPU occupancy rate on MAC/iOS is 100% per core.)
 
+
+##Cordova Compatible
+
+The ultimate goal of BlackHawk is being a complete replacement of Cordova on iOS platform, so that BlackHawk is fully compatible with Cordova's javascript API.
+
+####Check-list of BlackHawk plugins:
+
+- [x] Console
+- [x] Accelerometer
+- [ ] Bluetooth (waitting for supporting iOS8)
+- [ ] Vibration
+- [ ] Device
+- [ ] Device Orientation
+
+
 ##Architecture
 
-###Basic Architecture
+####Basic Architecture
 
 BlackHawk provide a framework working as a sub Xcode project. Everything is inside the BlackHawkViewController Class.
 
@@ -24,7 +39,7 @@ Inside BlackHawk there is a WKWebView with the same frame of BlackHawkViewContro
 
 WITHOUT ANY PRIVATE APIs.
 
-###How Dose Javascript Send Messages to Native Layer
+####How Dose Javascript Send Messages to Native Layer
 
 We use `userContentController(userContentController: WKUserContentController, didReceiveScriptMessage message: WKScriptMessage)` in WKScriptMessageHandler delegate to receive messages sent by javascript. Sendding messages in javascript is pretty easy in WKWebView:
 
@@ -41,7 +56,7 @@ let conf = WKWebViewConfiguration()
 conf.userContentController.addScriptMessageHandler(self, name: "BlackHawk")
 ```
 
-###How Dose BlackHawk Fire Up Some Code
+####How Dose BlackHawk Fire Up Some Code
 
 As we all know Swift is a compiled language the same as Objective-C. But thanks to the [Objective-C Runtime](https://developer.apple.com/library/prerelease/ios/documentation/Cocoa/Reference/ObjCRuntimeRef/) we has lots of powerful reflection functions.
 
@@ -53,7 +68,7 @@ window.webkit.messageHandlers.BlackHawk.postMessage({className: 'Console', funct
 
 We get a NSDictionary on native layer, then we can get the class name and the function name.
 
-####Get the Object
+#####Get the Object
 
 ```swift
 if let cls = NSClassFromString(NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleName")!.description + "." + className) as? BlackHawkPlugin.Type{
@@ -67,11 +82,11 @@ Thanks to the completely Object Oriented Swift and its namespace, we can reflect
 > 2. The native plugin class must inherit from BlackHawkPlugin class
 > 3. We can call any functions in any plugin classes freely
 
-####Fire the Function
+#####Fire the Function
 
 BlackHawkPlugin inherit form NSObject, so we use `performSelector()` to fire the function we need.
 
-###How Dose Native Layer Send messages to Javascript Runtime
+####How Dose Native Layer Send messages to Javascript Runtime
 
 The WKWebView object `wk` has been set to every plugin object's wk property, so we can fire some javascript code easily:
 
@@ -79,21 +94,6 @@ The WKWebView object `wk` has been set to every plugin object's wk property, so 
 self.wk.evaluateJavaScript("alert(1);", completionHandler: nil)
 ```
 
-##Cordova Compatible
-
-The ultimate goal of BlackHawk is being a complete replacement of Cordova on iOS platform, so that BlackHawk is fully compatible with Cordova's javascript API.
-
-###Check-list of BlackHawk plugins:
-
-- [x] Console
-- [x] Accelerometer
-- [ ] Bluetooth (waitting for supporting iOS8)
-- [ ] Vibration
-- [ ] Device
-- [ ] Device Orientation
-
-
-####If you have any suggestions please open an issue. Plugins for BlackHawk will be the best things!
 
 ##Requirements
 
@@ -103,6 +103,8 @@ The ultimate goal of BlackHawk is being a complete replacement of Cordova on iOS
 ##How to Use
 
 to be filled.
+
+####If you have any suggestions please open an issue. Plugins for BlackHawk will be the best things!
 
 ##LICENSE
 BlackHawk is open-sourced software licensed under the MIT license.
