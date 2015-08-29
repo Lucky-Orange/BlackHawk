@@ -45,13 +45,13 @@ conf.userContentController.addScriptMessageHandler(self, name: "BlackHawk")
 
 As we all know Swift is a compiled language the same as Objective-C. But thanks to the [Objective-C Runtime](https://developer.apple.com/library/prerelease/ios/documentation/Cocoa/Reference/ObjCRuntimeRef/) we has lots of powerful reflection functions.
 
-We use `window.webkit.messageHandlers.BlackHawk.postMessage` send a JavaScript Object to native layer:
+We use `window.webkit.messageHandlers.BlackHawk.postMessage` send a JavaScript Object with all information we need to native layer:
 
 ```js
 window.webkit.messageHandlers.BlackHawk.postMessage({className: 'Console', functionName: 'log', taskId: Queue.length - 1, data: string});
 ```
 
-Then we can get a NSDictionary on native layer, so we get the class name and the function name now.
+Then we can get a NSDictionary on native layer, so we get the class name and the function name.
 
 ####Get the Object
 
@@ -61,7 +61,7 @@ if let cls = NSClassFromString(NSBundle.mainBundle().objectForInfoDictionaryKey(
 }
 ```
 
-Thanks to the completely Object Oriented Swift, we can reflect a object much more safe and flexible now:
+Thanks to the completely Object Oriented Swift, we can reflect a object much more safe and flexible:
 
 > 1. Full class name is CFBundleName + ClassName in Swift
 > 2. The native plugin class must inherit from BlackHawkPlugin class
