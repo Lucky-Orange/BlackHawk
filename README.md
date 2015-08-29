@@ -22,7 +22,7 @@ BlackHawk provide a framework working as a sub Xcode project. Everything is insi
 
 Inside BlackHawk there is a WKWebView with the same frame of BlackHawkViewController's view, and with some functions from WKScriptMessageHandler, WKUIDelegate and WKNavigationDelegate delegates. Because of Apple's strict policy on web view kernel, all the useful functions and the high performance are from WKWebView directly.
 
-NONE PRIVATE API.
+WITHOUT ANY PRIVATE APIs.
 
 ###How Dose Javascript Send Messages to Native Layer
 
