@@ -10,7 +10,7 @@ BlackHawk is a Cordova like javascript-native reflection bridge based on fast an
 BlackHawk is a Cordova like software that provides a javascript to native reflection bridge, written in pure Swift, aimed to provide a modern, hight-performance replacement of Cordova  on iOS platform. BlackHawk uses WKWebView in Apple's new WebKit Framework with pure Swift Language.
 
 ###High Performance
-With BlackHawk, you can reduce the cost of RAM and CPU significantly, especially for complicated HTML5 pages. A chinese shooting game called "萌战姬" was tested on iPod Touch 6 with BlackHawk and Cordova that BlackHawk can reduce the RAM/CPU cost from 140MB / 100% on UIWebView to 9MB / 5%. That's tons of progress.
+BlackHawk can reduce the cost of RAM and CPU significantly, especially for complicated HTML5 pages. A chinese shooting game called "萌战姬" was tested on iPod Touch 6 with BlackHawk and Cordova that BlackHawk can reduce the RAM/CPU cost from 140MB / 100% on UIWebView to 9MB / 5%. That's tons of progress.
 
 (BTW, the full CPU occupancy rate on MAC/iOS is 100% per core.)
 
@@ -65,11 +65,11 @@ Thanks to the completely Object Oriented Swift and its namespace, we can reflect
 
 > 1. Full class name is CFBundleName + ClassName in Swift
 > 2. The native plugin class must inherit from BlackHawkPlugin class
-> 3. You can call any functions in any plugin classes freely
+> 3. We can call any functions in any plugin classes freely
 
 ####Fire the Function
 
-BlackHawkPlugin inherit form NSObject, so we use `performSelector()` to fire the function you need.
+BlackHawkPlugin inherit form NSObject, so we use `performSelector()` to fire the function we need.
 
 ###How Dose Native Layer Send messages to Javascript Runtime
 
