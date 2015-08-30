@@ -41,7 +41,7 @@ The ultimate goal of BlackHawk is being a complete replacement of Cordova on iOS
 - [x] [Accelerometer](https://github.com/Lucky-Orange/BlackHawk-Plugin-Accelerometer)
 - [ ] Bluetooth (waitting for supporting iOS8)
 - [x] [Vibration](https://github.com/Lucky-Orange/BlackHawk-Plugin-Vibration)
-- [ ] Device
+- [x] [Device (already built in)](https://github.com/Lucky-Orange/BlackHawk-Plugin-Device)
 - [ ] Device Orientation
 
 

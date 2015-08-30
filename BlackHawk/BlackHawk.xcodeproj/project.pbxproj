@@ -13,6 +13,7 @@
 		8EB9D5271B903F8300C46FA6 /* BlackHawkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9D5261B903F8300C46FA6 /* BlackHawkViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		8EB9D5291B903FA500C46FA6 /* BlackHawkErrorsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9D5281B903FA500C46FA6 /* BlackHawkErrorsDelegate.swift */; settings = {ASSET_TAGS = (); }; };
 		8EB9D52B1B903FCC00C46FA6 /* BlackHawkPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9D52A1B903FCC00C46FA6 /* BlackHawkPlugin.swift */; settings = {ASSET_TAGS = (); }; };
+		C862EA221B93576F005AD82F /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = C862EA211B93576F005AD82F /* Device.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		8EB9D5261B903F8300C46FA6 /* BlackHawkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackHawkViewController.swift; sourceTree = "<group>"; };
 		8EB9D5281B903FA500C46FA6 /* BlackHawkErrorsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackHawkErrorsDelegate.swift; sourceTree = "<group>"; };
 		8EB9D52A1B903FCC00C46FA6 /* BlackHawkPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackHawkPlugin.swift; sourceTree = "<group>"; };
+		C862EA211B93576F005AD82F /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				8EB9D5261B903F8300C46FA6 /* BlackHawkViewController.swift */,
 				8EB9D5281B903FA500C46FA6 /* BlackHawkErrorsDelegate.swift */,
 				8EB9D52A1B903FCC00C46FA6 /* BlackHawkPlugin.swift */,
+				C862EA201B93573D005AD82F /* RuntimeInjection */,
 				8EB9D5111B903F4B00C46FA6 /* Info.plist */,
 			);
 			path = BlackHawk;
@@ -93,6 +96,14 @@
 				8EB9D51D1B903F4C00C46FA6 /* Info.plist */,
 			);
 			path = BlackHawkTests;
+			sourceTree = "<group>";
+		};
+		C862EA201B93573D005AD82F /* RuntimeInjection */ = {
+			isa = PBXGroup;
+			children = (
+				C862EA211B93576F005AD82F /* Device.swift */,
+			);
+			name = RuntimeInjection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +217,7 @@
 				8EB9D5291B903FA500C46FA6 /* BlackHawkErrorsDelegate.swift in Sources */,
 				8EB9D5271B903F8300C46FA6 /* BlackHawkViewController.swift in Sources */,
 				8EB9D52B1B903FCC00C46FA6 /* BlackHawkPlugin.swift in Sources */,
+				C862EA221B93576F005AD82F /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +403,7 @@
 				8EB9D5221B903F4C00C46FA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8EB9D5231B903F4C00C46FA6 /* Build configuration list for PBXNativeTarget "BlackHawkTests" */ = {
 			isa = XCConfigurationList;
@@ -399,6 +412,7 @@
 				8EB9D5251B903F4C00C46FA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

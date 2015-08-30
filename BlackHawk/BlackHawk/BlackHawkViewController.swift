@@ -32,21 +32,22 @@ public class BlackHawkViewController: UIViewController, WKScriptMessageHandler, 
                 let conf = WKWebViewConfiguration()
                 conf.userContentController.addScriptMessageHandler(self, name: "BlackHawk")
                 
-                wk = WKWebView(frame: self.view.frame, configuration: conf)
-                wk.UIDelegate = self
-                wk.navigationDelegate = self
-                wk.translatesAutoresizingMaskIntoConstraints = false
-                wk.loadRequest(request)
+                self.wk = WKWebView(frame: self.view.frame, configuration: conf)
+                self.wk.UIDelegate = self
+                self.wk.navigationDelegate = self
+                self.wk.translatesAutoresizingMaskIntoConstraints = false
+                self.wk.loadRequest(request)
                 
-                self.view.addSubview(wk)
-                self.view.sendSubviewToBack(wk)
+                self.view.addSubview(self.wk)
+                self.view.sendSubviewToBack(self.wk)
 
                 self.runPluginJS(["Base", "Accelerometer", "Console", "Vibration"])
+                Device.injectValuesInToRuntime(self.wk)
                 
-                self.view.addConstraint(NSLayoutConstraint(item: wk, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1, constant: 0))
-                self.view.addConstraint(NSLayoutConstraint(item: wk, attribute: .Right, relatedBy: .Equal, toItem: self.view, attribute: .Right, multiplier: 1, constant: 0))
-                self.view.addConstraint(NSLayoutConstraint(item: wk, attribute: .Top, relatedBy: .Equal, toItem: self.view, attribute: .Top, multiplier: 1, constant: 0))
-                self.view.addConstraint(NSLayoutConstraint(item: wk, attribute: .Bottom, relatedBy: .Equal, toItem: self.bottomLayoutGuide, attribute: .Bottom, multiplier: 1, constant: 0))
+                self.view.addConstraint(NSLayoutConstraint(item: self.wk, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1, constant: 0))
+                self.view.addConstraint(NSLayoutConstraint(item: self.wk, attribute: .Right, relatedBy: .Equal, toItem: self.view, attribute: .Right, multiplier: 1, constant: 0))
+                self.view.addConstraint(NSLayoutConstraint(item: self.wk, attribute: .Top, relatedBy: .Equal, toItem: self.view, attribute: .Top, multiplier: 1, constant: 0))
+                self.view.addConstraint(NSLayoutConstraint(item: self.wk, attribute: .Bottom, relatedBy: .Equal, toItem: self.bottomLayoutGuide, attribute: .Bottom, multiplier: 1, constant: 0))
             } else {
                 NSLog("URL error!")
                 self.delegate?.BlackHawkErrors?(URLEroor: urlString)
@@ -61,7 +62,7 @@ public class BlackHawkViewController: UIViewController, WKScriptMessageHandler, 
             if let path = NSBundle.mainBundle().pathForResource(name, ofType: "js", inDirectory: "www/plugins") {
                 do {
                     let js = try NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding)
-                    wk.evaluateJavaScript(js as String, completionHandler: nil)
+                    self.wk.evaluateJavaScript(js as String, completionHandler: nil)
                 } catch let error as NSError {
                     NSLog(error.debugDescription)
                 }
