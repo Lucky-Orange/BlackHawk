@@ -18,6 +18,7 @@
 		8EB9D5441B904F9A00C46FA6 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 8EB9D5431B904F9A00C46FA6 /* www */; settings = {ASSET_TAGS = (); }; };
 		8EB9D5481B904FED00C46FA6 /* Accelerometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9D5461B904FED00C46FA6 /* Accelerometer.swift */; settings = {ASSET_TAGS = (); }; };
 		8EB9D5491B904FED00C46FA6 /* Console.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9D5471B904FED00C46FA6 /* Console.swift */; settings = {ASSET_TAGS = (); }; };
+		C862EA1C1B934F4D005AD82F /* Vibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C862EA1B1B934F4D005AD82F /* Vibration.swift */; settings = {ASSET_TAGS = (); }; };
 		C8CFD2E61B90B699006FDE56 /* GCDWebServers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8CFD2E11B90B677006FDE56 /* GCDWebServers.framework */; };
 		C8CFD2E71B90B699006FDE56 /* GCDWebServers.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C8CFD2E11B90B677006FDE56 /* GCDWebServers.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -118,6 +119,7 @@
 		8EB9D5431B904F9A00C46FA6 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../www; sourceTree = "<group>"; };
 		8EB9D5461B904FED00C46FA6 /* Accelerometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Accelerometer.swift; path = ../../BlackHawkPlugins/Accelerometer.swift; sourceTree = "<group>"; };
 		8EB9D5471B904FED00C46FA6 /* Console.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Console.swift; path = ../../BlackHawkPlugins/Console.swift; sourceTree = "<group>"; };
+		C862EA1B1B934F4D005AD82F /* Vibration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vibration.swift; path = ../../BlackHawkPlugins/Vibration.swift; sourceTree = "<group>"; };
 		C8CFD2D21B90B677006FDE56 /* GCDWebServer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GCDWebServer.xcodeproj; path = "GCDWebServer-3.2.5/GCDWebServer.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -207,6 +209,7 @@
 			children = (
 				8EB9D5461B904FED00C46FA6 /* Accelerometer.swift */,
 				8EB9D5471B904FED00C46FA6 /* Console.swift */,
+				C862EA1B1B934F4D005AD82F /* Vibration.swift */,
 			);
 			name = BlackHawkPlugins;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 			files = (
 				8EB9D5481B904FED00C46FA6 /* Accelerometer.swift in Sources */,
 				8EB9D4B91B903DAE00C46FA6 /* ViewController.swift in Sources */,
+				C862EA1C1B934F4D005AD82F /* Vibration.swift in Sources */,
 				8EB9D4B71B903DAE00C46FA6 /* AppDelegate.swift in Sources */,
 				8EB9D5491B904FED00C46FA6 /* Console.swift in Sources */,
 			);

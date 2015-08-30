@@ -41,7 +41,7 @@ public class BlackHawkViewController: UIViewController, WKScriptMessageHandler, 
                 self.view.addSubview(wk)
                 self.view.sendSubviewToBack(wk)
 
-                self.runPluginJS(["Base", "Accelerometer", "Console"])
+                self.runPluginJS(["Base", "Accelerometer", "Console", "Vibration"])
                 
                 self.view.addConstraint(NSLayoutConstraint(item: wk, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1, constant: 0))
                 self.view.addConstraint(NSLayoutConstraint(item: wk, attribute: .Right, relatedBy: .Equal, toItem: self.view, attribute: .Right, multiplier: 1, constant: 0))
