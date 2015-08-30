@@ -54,7 +54,44 @@ The ultimate goal of BlackHawk is being a complete replacement of Cordova on iOS
 
 [Documentation of Architecture](https://github.com/Lucky-Orange/BlackHawk/wiki/Architecture)
 
-####If you have any suggestions please open an issue. Plugins for BlackHawk will be the best things!
+##How to Use
+
+###include as sub project
+
+Drag BlackHawk/BlackHawk.xcodeproj into your project as d sub project.
+
+###copy files
+
+Copy `www` directory to your project, and add it to `Build Phases` > `Copy Bundle Resources`.
+
+![pic](http://lvwenhan.com/content/uploadfile/201508/89811440934073.png)
+
+###write some code
+
+In anywhere you want to show a BlackHawk View Controller:
+
+```swift
+import UIKit
+import BlackHawk
+
+class ViewController: BlackHawkViewController {
+
+... ...
+```
+
+###run on devices
+
+If you want to run your project on a device, just do one thing:
+
+![pic](http://lvwenhan.com/content/uploadfile/201508/de471440934490.png)
+
+###That's it!
+
+##Contribution
+
+If you have any suggestions please open an issue, and you are very welcome to fork and submit pull requests.
+
+####Plugins for BlackHawk will be best news!
 
 ##LICENSE
 BlackHawk is open-sourced software licensed under the MIT license.
