@@ -1,7 +1,7 @@
 BlackHawk
 ------------
 
-BlackHawk is a Cordova like javascript-native reflection bridge based on fast and sexy WKWebView written in pure Swift, with incredible high performance.
+BlackHawk is a Cordova compatible javascript-native reflection bridge based on fast and sexy WKWebView written in pure Swift, with incredible high performance.
 
 ##Incredible High Performance
 
