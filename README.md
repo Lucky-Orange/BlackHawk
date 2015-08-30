@@ -87,6 +87,31 @@ If you want to run your project on a device, just do one thing:
 
 ###That's it!
 
+##How can BlackHawk be?
+
+BlackHawk is cordova compatible, actually it's a javascript-native reflection bridge, cordova compatible layer is just one of many layers on it.
+
+Obviously you can build your own layer based on your own protocol. Maybe next killer Hybrid Development Framework will be made by you!
+
+##Make a plugin for BlackHawk
+
+If you want to build a plugin named `Nothing`, you need to do 3 steps to make your plugin running:
+
+1. new a javascript file named `Nothing.js` in `www/plugins` directory
+2. add `Nothing` to the params of self.runPluginJS(["Base"]) in BlackHawkViewController class.
+3. do everything you want in `Nothing.js`, new a Swift file or not depends on you. If you want, just see:
+    
+    ```swift
+    // js code
+    Queue.push(Task.init(Queue.length, onSuccess, onError));
+    window.webkit.messageHandlers.BlackHawk.postMessage({
+        className: 'NothingClassName',
+        functionName: 'functionName',
+        taskId: Queue.length - 1,
+        data: 'nothing'
+    });
+    ```
+
 ##Contribution
 
 If you have any suggestions please open an issue, and you are very welcome to fork and submit pull requests.
