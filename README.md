@@ -12,15 +12,33 @@ BlackHawk is a Cordova compatible javascript-native reflection bridge based on f
     * [Cordova](http://lvwenhan.com/content/uploadfile/201508/f84a1440930502.png)
     * [BlackHawk](http://lvwenhan.com/content/uploadfile/201508/b4921440930504.png)
 
-###Cordova:
+####Cordova:
 
 ![pic](http://lvwenhan.com/content/uploadfile/201508/f4561440930514.png)
 
-###BlackHawk:
+####BlackHawk:
 
 ![pic](http://lvwenhan.com/content/uploadfile/201508/508d1440930514.png)
 
 > ###That's tons of progress.
+
+###Let's test "萌战姬" on iPhone 4S
+
+* Device: iPhone 4S
+
+####Cordova:
+
+* fps: 15-18
+* fps when explosion: 1-5
+* [ScreenShot](http://lvwenhan.com/content/uploadfile/201508/d4c21440998158.png)
+
+####BlackHawk:
+
+* fps: 26-30
+* fps when explosion: 15-20
+* [ScreenShot](http://lvwenhan.com/content/uploadfile/201508/b25f1440998119.png)
+
+####BlackHawk makes "萌战姬" can be played on iPhone 4S now.
 
 ##Features
 

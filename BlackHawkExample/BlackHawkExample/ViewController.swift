@@ -14,7 +14,7 @@ class ViewController: BlackHawkViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.url = "http://127.0.0.1:8000/"
+        self.url = "http://123.59.33.150/dfj/h5/"
     }
 
     override func didReceiveMemoryWarning() {
