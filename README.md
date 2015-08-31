@@ -58,7 +58,7 @@ The ultimate goal of BlackHawk is being a complete replacement of Cordova on iOS
 
 ###include as sub project
 
-Drag BlackHawk/BlackHawk.xcodeproj into your project as d sub project.
+Drag BlackHawk/BlackHawk.xcodeproj into your project as a sub project.
 
 ###copy files
 
@@ -87,7 +87,7 @@ If you want to run your project on a device, just do one thing:
 
 ###That's it!
 
-##How can BlackHawk be?
+##What can BlackHawk be?
 
 BlackHawk is cordova compatible, actually it's a javascript-native reflection bridge, cordova compatible layer is just one of many layers on it.
 
