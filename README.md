@@ -95,7 +95,7 @@ Obviously you can build your own layer based on your own protocol. Maybe next ki
 
 ##Make a plugin for BlackHawk
 
-If you want to build a plugin named `Nothing`, you need to do 3 steps to make your plugin running:
+If you want to build a plugin named `Nothing`, you need to do 3 steps to make your plugin run:
 
 1. new a javascript file named `Nothing.js` in `www/plugins` directory
 2. add `Nothing` to the params of self.runPluginJS(["Base"]) in BlackHawkViewController class.
