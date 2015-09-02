@@ -89,33 +89,29 @@ extension wkScriptMessageHandler {
     
     public func userContentController(userContentController: WKUserContentController, didReceiveScriptMessage message: WKScriptMessage) {
         if(message.name == "BlackHawk") {
-            if let a = message.body as? NSDictionary {
-                if let className = a["className"]?.description {
-                    if let functionName = a["functionName"]?.description {
-                        if let cls = NSClassFromString(NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleName")!.description + "." + className) as? BlackHawkPlugin.Type{
-                            let obj = cls.init()
-                            let functionSelector = Selector(functionName)
-                            if obj.respondsToSelector(functionSelector) {
-                                obj.wk = self.wk
-                                obj.taskId = a["taskId"]?.integerValue
-                                obj.data = a["data"]?.description
-                                obj.performSelector(functionSelector)
-                            } else {
-                                let errorMessage = "Reflection Failure! Not found \(functionName) in \(className) Class"
-                                NSLog(errorMessage)
-                                self.delegate?.BlackHawkErrors?(ReflectionEroor: self.url, className: functionName, functionName: functionName, message: errorMessage)
-                            }
-                        } else {
-                            let errorMessage = "Reflection Failure! Class \(className) Not found"
-                            NSLog(errorMessage)
-                            self.delegate?.BlackHawkErrors?(ReflectionEroor: self.url, className: className, functionName: functionName, message: errorMessage)
-                        }
+            if let a = message.body as? NSDictionary, className = a["className"]?.description, functionName = a["functionName"]?.description {
+                if let cls = NSClassFromString(NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleName")!.description + "." + className) as? BlackHawkPlugin.Type{
+                    let obj = cls.init()
+                    let functionSelector = Selector(functionName)
+                    if obj.respondsToSelector(functionSelector) {
+                        obj.wk = self.wk
+                        obj.taskId = a["taskId"]?.integerValue
+                        obj.data = a["data"]?.description
+                        obj.performSelector(functionSelector)
                     } else {
-                        let errorMessage = "Reflection Failure! Data error: \(message.body)"
+                        let errorMessage = "Reflection Failure! Not found \(functionName) in \(className) Class"
                         NSLog(errorMessage)
-                        self.delegate?.BlackHawkErrors?(ReflectionEroor: self.url, className: "", functionName: "", message: errorMessage)
+                        self.delegate?.BlackHawkErrors?(ReflectionEroor: self.url, className: functionName, functionName: functionName, message: errorMessage)
                     }
+                } else {
+                    let errorMessage = "Reflection Failure! Class \(className) Not found"
+                    NSLog(errorMessage)
+                    self.delegate?.BlackHawkErrors?(ReflectionEroor: self.url, className: className, functionName: functionName, message: errorMessage)
                 }
+            } else {
+                let errorMessage = "Reflection Failure! Data error: \(message.body)"
+                NSLog(errorMessage)
+                self.delegate?.BlackHawkErrors?(ReflectionEroor: self.url, className: "", functionName: "", message: errorMessage)
             }
         }
     }
