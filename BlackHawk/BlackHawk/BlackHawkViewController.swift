@@ -11,50 +11,50 @@ import WebKit
 
 public class BlackHawkViewController: UIViewController, WKScriptMessageHandler, WKUIDelegate, WKNavigationDelegate {
     
-    public var wk = WKWebView()
-    public var url: String!
+    public var wk: WKWebView!
+    public var url: String! {
+        didSet{
+            if let urlString = self.url {
+                if let url = NSURL(string: urlString) {
+                    let request = NSURLRequest(URL: url)
+                    self.wk.loadRequest(request)
+                    NSLog("Load ended: \(self.url)")
+                } else {
+                    NSLog("URL error!")
+                    self.delegate?.BlackHawkErrors?(URLEroor: urlString)
+                }
+            } else {
+                NSLog("ERROR!! Please set self.url before viewDidAppear.")
+            }
+        }
+    }
     public var delegate: BlackHawkErrorsDelegate?
     
     override public func viewDidLoad() {
         super.viewDidLoad()
+        
+        let conf = WKWebViewConfiguration()
+        conf.userContentController.addScriptMessageHandler(self, name: "BlackHawk")
+        
+        self.wk = WKWebView(frame: CGRectMake(0, 0, 10, 10), configuration: conf)
+        self.wk.UIDelegate = self
+        self.wk.navigationDelegate = self
+        self.wk.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.view.addSubview(self.wk)
+        self.view.sendSubviewToBack(self.wk)
+        
+        self.runPluginJS(["Base", "Accelerometer", "Console", "Vibration", "Scanner"])
+        Device.injectValuesInToRuntime(self.wk)
+        
+        self.view.addConstraint(NSLayoutConstraint(item: self.wk, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1, constant: 0))
+        self.view.addConstraint(NSLayoutConstraint(item: self.wk, attribute: .Right, relatedBy: .Equal, toItem: self.view, attribute: .Right, multiplier: 1, constant: 0))
+        self.view.addConstraint(NSLayoutConstraint(item: self.wk, attribute: .Top, relatedBy: .Equal, toItem: self.view, attribute: .Top, multiplier: 1, constant: 0))
+        self.view.addConstraint(NSLayoutConstraint(item: self.wk, attribute: .Bottom, relatedBy: .Equal, toItem: self.bottomLayoutGuide, attribute: .Bottom, multiplier: 1, constant: 0))
     }
     
     override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-    override public func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        if let urlString = self.url {
-            if let url = NSURL(string: urlString) {
-                let request = NSURLRequest(URL: url)
-                
-                let conf = WKWebViewConfiguration()
-                conf.userContentController.addScriptMessageHandler(self, name: "BlackHawk")
-                
-                self.wk = WKWebView(frame: self.view.frame, configuration: conf)
-                self.wk.UIDelegate = self
-                self.wk.navigationDelegate = self
-                self.wk.translatesAutoresizingMaskIntoConstraints = false
-                self.wk.loadRequest(request)
-                
-                self.view.addSubview(self.wk)
-                self.view.sendSubviewToBack(self.wk)
-
-                self.runPluginJS(["Base", "Accelerometer", "Console", "Vibration"])
-                Device.injectValuesInToRuntime(self.wk)
-                
-                self.view.addConstraint(NSLayoutConstraint(item: self.wk, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1, constant: 0))
-                self.view.addConstraint(NSLayoutConstraint(item: self.wk, attribute: .Right, relatedBy: .Equal, toItem: self.view, attribute: .Right, multiplier: 1, constant: 0))
-                self.view.addConstraint(NSLayoutConstraint(item: self.wk, attribute: .Top, relatedBy: .Equal, toItem: self.view, attribute: .Top, multiplier: 1, constant: 0))
-                self.view.addConstraint(NSLayoutConstraint(item: self.wk, attribute: .Bottom, relatedBy: .Equal, toItem: self.bottomLayoutGuide, attribute: .Bottom, multiplier: 1, constant: 0))
-            } else {
-                NSLog("URL error!")
-                self.delegate?.BlackHawkErrors?(URLEroor: urlString)
-            }
-        } else {
-            NSLog("ERROR!! Please set self.url before viewDidAppear.")
-        }
     }
     
     func runPluginJS(names: Array<String>) {
