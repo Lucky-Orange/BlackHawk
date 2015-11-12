@@ -13,12 +13,12 @@
 		8EB9D4BE1B903DAE00C46FA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EB9D4BD1B903DAE00C46FA6 /* Assets.xcassets */; };
 		8EB9D4C11B903DAE00C46FA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EB9D4BF1B903DAE00C46FA6 /* LaunchScreen.storyboard */; };
 		8EB9D4CC1B903DAE00C46FA6 /* BlackHawkExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9D4CB1B903DAE00C46FA6 /* BlackHawkExampleTests.swift */; };
-		8EB9D5351B9044A800C46FA6 /* BlackHawk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB9D5321B9044A200C46FA6 /* BlackHawk.framework */; };
-		8EB9D5361B9044A800C46FA6 /* BlackHawk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB9D5321B9044A200C46FA6 /* BlackHawk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8EB9D5441B904F9A00C46FA6 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 8EB9D5431B904F9A00C46FA6 /* www */; settings = {ASSET_TAGS = (); }; };
-		8EB9D5481B904FED00C46FA6 /* Accelerometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9D5461B904FED00C46FA6 /* Accelerometer.swift */; settings = {ASSET_TAGS = (); }; };
-		8EB9D5491B904FED00C46FA6 /* Console.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9D5471B904FED00C46FA6 /* Console.swift */; settings = {ASSET_TAGS = (); }; };
-		C862EA1C1B934F4D005AD82F /* Vibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C862EA1B1B934F4D005AD82F /* Vibration.swift */; settings = {ASSET_TAGS = (); }; };
+		8EB9D5441B904F9A00C46FA6 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 8EB9D5431B904F9A00C46FA6 /* www */; };
+		8EB9D5481B904FED00C46FA6 /* Accelerometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9D5461B904FED00C46FA6 /* Accelerometer.swift */; };
+		8EB9D5491B904FED00C46FA6 /* Console.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9D5471B904FED00C46FA6 /* Console.swift */; };
+		C816057B1BF48A35007D367D /* BlackHawk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C81605781BF48A26007D367D /* BlackHawk.framework */; };
+		C816057C1BF48A35007D367D /* BlackHawk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C81605781BF48A26007D367D /* BlackHawk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C862EA1C1B934F4D005AD82F /* Vibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C862EA1B1B934F4D005AD82F /* Vibration.swift */; };
 		C8CFD2E61B90B699006FDE56 /* GCDWebServers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8CFD2E11B90B677006FDE56 /* GCDWebServers.framework */; };
 		C8CFD2E71B90B699006FDE56 /* GCDWebServers.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C8CFD2E11B90B677006FDE56 /* GCDWebServers.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -31,23 +31,23 @@
 			remoteGlobalIDString = 8EB9D4B21B903DAE00C46FA6;
 			remoteInfo = BlackHawkExample;
 		};
-		8EB9D5311B9044A200C46FA6 /* PBXContainerItemProxy */ = {
+		C81605771BF48A26007D367D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8EB9D52C1B9044A200C46FA6 /* BlackHawk.xcodeproj */;
+			containerPortal = C81605721BF48A26007D367D /* BlackHawk.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8EB9D50C1B903F4B00C46FA6;
 			remoteInfo = BlackHawk;
 		};
-		8EB9D5331B9044A200C46FA6 /* PBXContainerItemProxy */ = {
+		C81605791BF48A26007D367D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8EB9D52C1B9044A200C46FA6 /* BlackHawk.xcodeproj */;
+			containerPortal = C81605721BF48A26007D367D /* BlackHawk.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8EB9D5161B903F4B00C46FA6;
 			remoteInfo = BlackHawkTests;
 		};
-		8EB9D5371B9044A900C46FA6 /* PBXContainerItemProxy */ = {
+		C816057D1BF48A35007D367D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8EB9D52C1B9044A200C46FA6 /* BlackHawk.xcodeproj */;
+			containerPortal = C81605721BF48A26007D367D /* BlackHawk.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 8EB9D50B1B903F4B00C46FA6;
 			remoteInfo = BlackHawk;
@@ -96,8 +96,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8EB9D5361B9044A800C46FA6 /* BlackHawk.framework in Embed Frameworks */,
 				C8CFD2E71B90B699006FDE56 /* GCDWebServers.framework in Embed Frameworks */,
+				C816057C1BF48A35007D367D /* BlackHawk.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,10 +115,10 @@
 		8EB9D4C71B903DAE00C46FA6 /* BlackHawkExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackHawkExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EB9D4CB1B903DAE00C46FA6 /* BlackHawkExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackHawkExampleTests.swift; sourceTree = "<group>"; };
 		8EB9D4CD1B903DAE00C46FA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8EB9D52C1B9044A200C46FA6 /* BlackHawk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BlackHawk.xcodeproj; path = ../BlackHawk/BlackHawk.xcodeproj; sourceTree = "<group>"; };
 		8EB9D5431B904F9A00C46FA6 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../www; sourceTree = "<group>"; };
 		8EB9D5461B904FED00C46FA6 /* Accelerometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Accelerometer.swift; path = ../../BlackHawkPlugins/Accelerometer.swift; sourceTree = "<group>"; };
 		8EB9D5471B904FED00C46FA6 /* Console.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Console.swift; path = ../../BlackHawkPlugins/Console.swift; sourceTree = "<group>"; };
+		C81605721BF48A26007D367D /* BlackHawk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BlackHawk.xcodeproj; path = ../BlackHawk.xcodeproj; sourceTree = "<group>"; };
 		C862EA1B1B934F4D005AD82F /* Vibration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vibration.swift; path = ../../BlackHawkPlugins/Vibration.swift; sourceTree = "<group>"; };
 		C8CFD2D21B90B677006FDE56 /* GCDWebServer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GCDWebServer.xcodeproj; path = "GCDWebServer-3.2.5/GCDWebServer.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,8 +128,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EB9D5351B9044A800C46FA6 /* BlackHawk.framework in Frameworks */,
 				C8CFD2E61B90B699006FDE56 /* GCDWebServers.framework in Frameworks */,
+				C816057B1BF48A35007D367D /* BlackHawk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,8 +146,8 @@
 		8EB9D4AA1B903DAE00C46FA6 = {
 			isa = PBXGroup;
 			children = (
+				C81605721BF48A26007D367D /* BlackHawk.xcodeproj */,
 				8EB9D5431B904F9A00C46FA6 /* www */,
-				8EB9D52C1B9044A200C46FA6 /* BlackHawk.xcodeproj */,
 				8EB9D4B51B903DAE00C46FA6 /* BlackHawkExample */,
 				8EB9D4CA1B903DAE00C46FA6 /* BlackHawkExampleTests */,
 				8EB9D53A1B9046B000C46FA6 /* Dependences */,
@@ -187,15 +187,6 @@
 			path = BlackHawkExampleTests;
 			sourceTree = "<group>";
 		};
-		8EB9D52D1B9044A200C46FA6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8EB9D5321B9044A200C46FA6 /* BlackHawk.framework */,
-				8EB9D5341B9044A200C46FA6 /* BlackHawkTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		8EB9D53A1B9046B000C46FA6 /* Dependences */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +203,15 @@
 				C862EA1B1B934F4D005AD82F /* Vibration.swift */,
 			);
 			name = BlackHawkPlugins;
+			sourceTree = "<group>";
+		};
+		C81605731BF48A26007D367D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C81605781BF48A26007D367D /* BlackHawk.framework */,
+				C816057A1BF48A26007D367D /* BlackHawkTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		C8CFD2D31B90B677006FDE56 /* Products */ = {
@@ -240,8 +240,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				8EB9D5381B9044A900C46FA6 /* PBXTargetDependency */,
 				C8CFD2E91B90B69A006FDE56 /* PBXTargetDependency */,
+				C816057E1BF48A35007D367D /* PBXTargetDependency */,
 			);
 			name = BlackHawkExample;
 			productName = BlackHawkExample;
@@ -277,7 +277,6 @@
 				TargetAttributes = {
 					8EB9D4B21B903DAE00C46FA6 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = TVXZ37DCUJ;
 					};
 					8EB9D4C61B903DAE00C46FA6 = {
 						CreatedOnToolsVersion = 7.0;
@@ -298,8 +297,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 8EB9D52D1B9044A200C46FA6 /* Products */;
-					ProjectRef = 8EB9D52C1B9044A200C46FA6 /* BlackHawk.xcodeproj */;
+					ProductGroup = C81605731BF48A26007D367D /* Products */;
+					ProjectRef = C81605721BF48A26007D367D /* BlackHawk.xcodeproj */;
 				},
 				{
 					ProductGroup = C8CFD2D31B90B677006FDE56 /* Products */;
@@ -315,18 +314,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		8EB9D5321B9044A200C46FA6 /* BlackHawk.framework */ = {
+		C81605781BF48A26007D367D /* BlackHawk.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = BlackHawk.framework;
-			remoteRef = 8EB9D5311B9044A200C46FA6 /* PBXContainerItemProxy */;
+			remoteRef = C81605771BF48A26007D367D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		8EB9D5341B9044A200C46FA6 /* BlackHawkTests.xctest */ = {
+		C816057A1BF48A26007D367D /* BlackHawkTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = BlackHawkTests.xctest;
-			remoteRef = 8EB9D5331B9044A200C46FA6 /* PBXContainerItemProxy */;
+			remoteRef = C81605791BF48A26007D367D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		C8CFD2DB1B90B677006FDE56 /* GCDWebServer */ = {
@@ -409,10 +408,10 @@
 			target = 8EB9D4B21B903DAE00C46FA6 /* BlackHawkExample */;
 			targetProxy = 8EB9D4C81B903DAE00C46FA6 /* PBXContainerItemProxy */;
 		};
-		8EB9D5381B9044A900C46FA6 /* PBXTargetDependency */ = {
+		C816057E1BF48A35007D367D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = BlackHawk;
-			targetProxy = 8EB9D5371B9044A900C46FA6 /* PBXContainerItemProxy */;
+			targetProxy = C816057D1BF48A35007D367D /* PBXContainerItemProxy */;
 		};
 		C8CFD2E91B90B69A006FDE56 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

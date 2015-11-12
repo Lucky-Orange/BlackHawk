@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		8EB9D5101B903F4B00C46FA6 /* BlackHawk.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EB9D50F1B903F4B00C46FA6 /* BlackHawk.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8EB9D5171B903F4B00C46FA6 /* BlackHawk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB9D50C1B903F4B00C46FA6 /* BlackHawk.framework */; settings = {ASSET_TAGS = (); }; };
+		8EB9D5171B903F4B00C46FA6 /* BlackHawk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB9D50C1B903F4B00C46FA6 /* BlackHawk.framework */; };
 		8EB9D51C1B903F4C00C46FA6 /* BlackHawkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9D51B1B903F4C00C46FA6 /* BlackHawkTests.swift */; };
-		8EB9D5271B903F8300C46FA6 /* BlackHawkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9D5261B903F8300C46FA6 /* BlackHawkViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		8EB9D5291B903FA500C46FA6 /* BlackHawkErrorsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9D5281B903FA500C46FA6 /* BlackHawkErrorsDelegate.swift */; settings = {ASSET_TAGS = (); }; };
-		8EB9D52B1B903FCC00C46FA6 /* BlackHawkPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9D52A1B903FCC00C46FA6 /* BlackHawkPlugin.swift */; settings = {ASSET_TAGS = (); }; };
-		C862EA221B93576F005AD82F /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = C862EA211B93576F005AD82F /* Device.swift */; settings = {ASSET_TAGS = (); }; };
+		C81605671BF489ED007D367D /* BlackHawkErrorsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81605641BF489ED007D367D /* BlackHawkErrorsDelegate.swift */; };
+		C81605681BF489ED007D367D /* BlackHawkPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81605651BF489ED007D367D /* BlackHawkPlugin.swift */; };
+		C81605691BF489ED007D367D /* BlackHawkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81605661BF489ED007D367D /* BlackHawkViewController.swift */; };
+		C816056B1BF489F6007D367D /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = C816056A1BF489F6007D367D /* Device.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,10 +33,10 @@
 		8EB9D5161B903F4B00C46FA6 /* BlackHawkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackHawkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EB9D51B1B903F4C00C46FA6 /* BlackHawkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackHawkTests.swift; sourceTree = "<group>"; };
 		8EB9D51D1B903F4C00C46FA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8EB9D5261B903F8300C46FA6 /* BlackHawkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackHawkViewController.swift; sourceTree = "<group>"; };
-		8EB9D5281B903FA500C46FA6 /* BlackHawkErrorsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackHawkErrorsDelegate.swift; sourceTree = "<group>"; };
-		8EB9D52A1B903FCC00C46FA6 /* BlackHawkPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackHawkPlugin.swift; sourceTree = "<group>"; };
-		C862EA211B93576F005AD82F /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		C81605641BF489ED007D367D /* BlackHawkErrorsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlackHawkErrorsDelegate.swift; path = Source/BlackHawkErrorsDelegate.swift; sourceTree = SOURCE_ROOT; };
+		C81605651BF489ED007D367D /* BlackHawkPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlackHawkPlugin.swift; path = Source/BlackHawkPlugin.swift; sourceTree = SOURCE_ROOT; };
+		C81605661BF489ED007D367D /* BlackHawkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlackHawkViewController.swift; path = Source/BlackHawkViewController.swift; sourceTree = SOURCE_ROOT; };
+		C816056A1BF489F6007D367D /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Source/Device.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				8EB9D50F1B903F4B00C46FA6 /* BlackHawk.h */,
-				8EB9D5261B903F8300C46FA6 /* BlackHawkViewController.swift */,
-				8EB9D5281B903FA500C46FA6 /* BlackHawkErrorsDelegate.swift */,
-				8EB9D52A1B903FCC00C46FA6 /* BlackHawkPlugin.swift */,
+				C81605641BF489ED007D367D /* BlackHawkErrorsDelegate.swift */,
+				C81605651BF489ED007D367D /* BlackHawkPlugin.swift */,
+				C81605661BF489ED007D367D /* BlackHawkViewController.swift */,
 				C862EA201B93573D005AD82F /* RuntimeInjection */,
 				8EB9D5111B903F4B00C46FA6 /* Info.plist */,
 			);
@@ -101,7 +101,7 @@
 		C862EA201B93573D005AD82F /* RuntimeInjection */ = {
 			isa = PBXGroup;
 			children = (
-				C862EA211B93576F005AD82F /* Device.swift */,
+				C816056A1BF489F6007D367D /* Device.swift */,
 			);
 			name = RuntimeInjection;
 			sourceTree = "<group>";
@@ -214,10 +214,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EB9D5291B903FA500C46FA6 /* BlackHawkErrorsDelegate.swift in Sources */,
-				8EB9D5271B903F8300C46FA6 /* BlackHawkViewController.swift in Sources */,
-				8EB9D52B1B903FCC00C46FA6 /* BlackHawkPlugin.swift in Sources */,
-				C862EA221B93576F005AD82F /* Device.swift in Sources */,
+				C81605671BF489ED007D367D /* BlackHawkErrorsDelegate.swift in Sources */,
+				C81605681BF489ED007D367D /* BlackHawkPlugin.swift in Sources */,
+				C81605691BF489ED007D367D /* BlackHawkViewController.swift in Sources */,
+				C816056B1BF489F6007D367D /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
