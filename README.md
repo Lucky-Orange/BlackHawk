@@ -65,8 +65,8 @@ The ultimate goal of BlackHawk is being a complete replacement of Cordova on iOS
 
 ##Requirements
 
-* iOS 8.0 +
-* Xcode 7 beta 6 (Swift 2.0)
+* iOS 8+
+* Xcode 7+ (Swift 2+)
 
 ##Architecture
 
