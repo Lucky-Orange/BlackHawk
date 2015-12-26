@@ -7,22 +7,13 @@
 //
 
 import UIKit
-import GCDWebServers
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var webServer: GCDWebServer!
-
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
-        // Create web server with GCDWebServer
-        self.webServer = GCDWebServer()
-        self.webServer.addGETHandlerForBasePath("/", directoryPath: NSBundle.mainBundle().resourcePath?.stringByAppendingString("/www"), indexFilename: "index.html", cacheAge: 3600, allowRangeRequests: true)
-        self.webServer.startWithPort(8000, bonjourName: nil)
-
         return true
     }
 

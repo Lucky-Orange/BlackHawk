@@ -19,8 +19,6 @@
 		C816057B1BF48A35007D367D /* BlackHawk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C81605781BF48A26007D367D /* BlackHawk.framework */; };
 		C816057C1BF48A35007D367D /* BlackHawk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C81605781BF48A26007D367D /* BlackHawk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C862EA1C1B934F4D005AD82F /* Vibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C862EA1B1B934F4D005AD82F /* Vibration.swift */; };
-		C8CFD2E61B90B699006FDE56 /* GCDWebServers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8CFD2E11B90B677006FDE56 /* GCDWebServers.framework */; };
-		C8CFD2E71B90B699006FDE56 /* GCDWebServers.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C8CFD2E11B90B677006FDE56 /* GCDWebServers.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,41 +50,6 @@
 			remoteGlobalIDString = 8EB9D50B1B903F4B00C46FA6;
 			remoteInfo = BlackHawk;
 		};
-		C8CFD2DA1B90B677006FDE56 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C8CFD2D21B90B677006FDE56 /* GCDWebServer.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8DD76FB20486AB0100D96B5E;
-			remoteInfo = "GCDWebServer (Mac)";
-		};
-		C8CFD2DC1B90B677006FDE56 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C8CFD2D21B90B677006FDE56 /* GCDWebServer.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E221125A1690B4DE0048D2B2;
-			remoteInfo = "GCDWebServer (iOS)";
-		};
-		C8CFD2DE1B90B677006FDE56 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C8CFD2D21B90B677006FDE56 /* GCDWebServer.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CEE28CD11AE004D800F4023C;
-			remoteInfo = "GCDWebServers (Mac)";
-		};
-		C8CFD2E01B90B677006FDE56 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C8CFD2D21B90B677006FDE56 /* GCDWebServer.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CEE28CEF1AE0051F00F4023C;
-			remoteInfo = "GCDWebServers (iOS)";
-		};
-		C8CFD2E81B90B69A006FDE56 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C8CFD2D21B90B677006FDE56 /* GCDWebServer.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = CEE28CEE1AE0051F00F4023C;
-			remoteInfo = "GCDWebServers (iOS)";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -96,7 +59,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C8CFD2E71B90B699006FDE56 /* GCDWebServers.framework in Embed Frameworks */,
 				C816057C1BF48A35007D367D /* BlackHawk.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -120,7 +82,6 @@
 		8EB9D5471B904FED00C46FA6 /* Console.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Console.swift; path = ../../BlackHawkPlugins/Console.swift; sourceTree = "<group>"; };
 		C81605721BF48A26007D367D /* BlackHawk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BlackHawk.xcodeproj; path = ../BlackHawk.xcodeproj; sourceTree = "<group>"; };
 		C862EA1B1B934F4D005AD82F /* Vibration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vibration.swift; path = ../../BlackHawkPlugins/Vibration.swift; sourceTree = "<group>"; };
-		C8CFD2D21B90B677006FDE56 /* GCDWebServer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GCDWebServer.xcodeproj; path = "GCDWebServer-3.2.5/GCDWebServer.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +89,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8CFD2E61B90B699006FDE56 /* GCDWebServers.framework in Frameworks */,
 				C816057B1BF48A35007D367D /* BlackHawk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,7 +110,6 @@
 				8EB9D5431B904F9A00C46FA6 /* www */,
 				8EB9D4B51B903DAE00C46FA6 /* BlackHawkExample */,
 				8EB9D4CA1B903DAE00C46FA6 /* BlackHawkExampleTests */,
-				8EB9D53A1B9046B000C46FA6 /* Dependences */,
 				8EB9D4B41B903DAE00C46FA6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -187,14 +146,6 @@
 			path = BlackHawkExampleTests;
 			sourceTree = "<group>";
 		};
-		8EB9D53A1B9046B000C46FA6 /* Dependences */ = {
-			isa = PBXGroup;
-			children = (
-				C8CFD2D21B90B677006FDE56 /* GCDWebServer.xcodeproj */,
-			);
-			name = Dependences;
-			sourceTree = "<group>";
-		};
 		8EB9D5451B904FDA00C46FA6 /* BlackHawkPlugins */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,17 +165,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C8CFD2D31B90B677006FDE56 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C8CFD2DB1B90B677006FDE56 /* GCDWebServer */,
-				C8CFD2DD1B90B677006FDE56 /* GCDWebServer.app */,
-				C8CFD2DF1B90B677006FDE56 /* GCDWebServers.framework */,
-				C8CFD2E11B90B677006FDE56 /* GCDWebServers.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -240,7 +180,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				C8CFD2E91B90B69A006FDE56 /* PBXTargetDependency */,
 				C816057E1BF48A35007D367D /* PBXTargetDependency */,
 			);
 			name = BlackHawkExample;
@@ -300,10 +239,6 @@
 					ProductGroup = C81605731BF48A26007D367D /* Products */;
 					ProjectRef = C81605721BF48A26007D367D /* BlackHawk.xcodeproj */;
 				},
-				{
-					ProductGroup = C8CFD2D31B90B677006FDE56 /* Products */;
-					ProjectRef = C8CFD2D21B90B677006FDE56 /* GCDWebServer.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -326,34 +261,6 @@
 			fileType = wrapper.cfbundle;
 			path = BlackHawkTests.xctest;
 			remoteRef = C81605791BF48A26007D367D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C8CFD2DB1B90B677006FDE56 /* GCDWebServer */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = GCDWebServer;
-			remoteRef = C8CFD2DA1B90B677006FDE56 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C8CFD2DD1B90B677006FDE56 /* GCDWebServer.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = GCDWebServer.app;
-			remoteRef = C8CFD2DC1B90B677006FDE56 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C8CFD2DF1B90B677006FDE56 /* GCDWebServers.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = GCDWebServers.framework;
-			remoteRef = C8CFD2DE1B90B677006FDE56 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C8CFD2E11B90B677006FDE56 /* GCDWebServers.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = GCDWebServers.framework;
-			remoteRef = C8CFD2E01B90B677006FDE56 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -413,11 +320,6 @@
 			name = BlackHawk;
 			targetProxy = C816057D1BF48A35007D367D /* PBXContainerItemProxy */;
 		};
-		C8CFD2E91B90B69A006FDE56 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "GCDWebServers (iOS)";
-			targetProxy = C8CFD2E81B90B69A006FDE56 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -476,7 +378,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -514,7 +416,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

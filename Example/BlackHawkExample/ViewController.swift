@@ -14,7 +14,7 @@ class ViewController: BlackHawkViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.url = "http://127.0.0.1:8000/"
+        self.wk.loadFileURL(NSBundle.mainBundle().URLForResource("index", withExtension: "html", subdirectory: "www")!, allowingReadAccessToURL: NSBundle.mainBundle().resourceURL!.URLByAppendingPathComponent("www", isDirectory: true))
     }
 
     override func didReceiveMemoryWarning() {
