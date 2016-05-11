@@ -44,7 +44,7 @@ public class BlackHawkViewController: UIViewController, WKScriptMessageHandler, 
         self.view.addSubview(self.wk)
         self.view.sendSubviewToBack(self.wk)
         
-        self.runPluginJS(["Base", "Accelerometer", "Console", "Vibration", "Scanner"])
+        self.runPluginJS(["Base"])
         Device.injectValuesInToRuntime(self.wk)
         
         self.view.addConstraint(NSLayoutConstraint(item: self.wk, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1, constant: 0))
@@ -55,19 +55,6 @@ public class BlackHawkViewController: UIViewController, WKScriptMessageHandler, 
     
     override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-    
-    func runPluginJS(names: Array<String>) {
-        for name in names {
-            if let path = NSBundle.mainBundle().pathForResource(name, ofType: "js", inDirectory: "www/plugins") {
-                do {
-                    let js = try NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding)
-                    self.wk.evaluateJavaScript(js as String, completionHandler: nil)
-                } catch let error as NSError {
-                    NSLog(error.debugDescription)
-                }
-            }
-        }
     }
 
 }
@@ -125,5 +112,21 @@ extension wkNavigationDelegate {
     }
     public func webView(webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: NSError) {
         NSLog(error.debugDescription)
+    }
+}
+
+private typealias wkRunPluginDelegate = BlackHawkViewController
+extension wkRunPluginDelegate {
+    public func runPluginJS(names: Array<String>) {
+        for name in names {
+            if let path = NSBundle.mainBundle().pathForResource(name, ofType: "js", inDirectory: "www/plugins") {
+                do {
+                    let js = try NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding)
+                    self.wk.evaluateJavaScript(js as String, completionHandler: nil)
+                } catch let error as NSError {
+                    NSLog(error.debugDescription)
+                }
+            }
+        }
     }
 }

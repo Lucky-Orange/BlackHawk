@@ -13,6 +13,7 @@ class ViewController: BlackHawkViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.runPluginJS(["Accelerometer", "Console", "Vibration", "Scanner"])
         
         self.wk.loadFileURL(NSBundle.mainBundle().URLForResource("index", withExtension: "html", subdirectory: "www")!, allowingReadAccessToURL: NSBundle.mainBundle().resourceURL!.URLByAppendingPathComponent("www", isDirectory: true))
     }
